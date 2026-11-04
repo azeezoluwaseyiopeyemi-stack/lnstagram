@@ -1,0 +1,64 @@
+<!doctype html>
+<html lang="en">
+<head>
+  <meta charset="UTF-8">
+  <meta name="viewport" content="width=device-width, initial-scale=1.0">
+  <meta name="theme-color" content="#ffffff">
+  <title>Instagram UI Demo</title>
+  <link rel="preconnect" href="https://fonts.googleapis.com">
+  <link rel="preconnect" href="https://fonts.gstatic.com" crossorigin>
+  <link href="https://fonts.googleapis.com/css2?family=Grand+Hotel&family=Inter:wght@400;500;600;700;800&display=swap" rel="stylesheet">
+  <link rel="stylesheet" href="style.css">
+</head>
+<body>
+  <div class="demo-note"><strong>UI DEMO</strong> — Independent Instagram-inspired interface. Not affiliated with Meta or Instagram.</div>
+  <aside class="sidebar">
+    <a class="wordmark" href="#" aria-label="Demo home">Instagram</a>
+    <nav>
+      <button class="nav-item active" data-page="Home"><span class="nav-icon">⌂</span><span>Home</span></button>
+      <button class="nav-item" data-page="Search"><span class="nav-icon">⌕</span><span>Search</span></button>
+      <button class="nav-item" data-page="Explore"><span class="nav-icon">▦</span><span>Explore</span></button>
+      <button class="nav-item" data-page="Reels"><span class="nav-icon">▻</span><span>Reels</span></button>
+      <button class="nav-item" data-page="Messages"><span class="nav-icon">➤</span><span>Messages</span><i class="dot"></i></button>
+      <button class="nav-item" data-page="Notifications"><span class="nav-icon">♡</span><span>Notifications</span></button>
+      <button class="nav-item" data-page="Create"><span class="nav-icon">⊞</span><span>Create</span></button>
+      <button class="nav-item" data-page="Profile"><span class="nav-avatar">D</span><span>Profile</span></button>
+    </nav>
+    <button class="nav-item more"><span class="nav-icon">☰</span><span>More</span></button>
+  </aside>
+
+  <main class="main">
+    <section class="feed-column" id="feedPage">
+      <div class="stories" id="stories"></div>
+      <div id="posts"></div>
+    </section>
+    <aside class="right-rail">
+      <div class="account-row">
+        <img class="avatar" src="https://i.pravatar.cc/100?img=12" alt="Your demo profile">
+        <div class="account-copy"><strong>demo.creator</strong><small>Demo account</small></div>
+        <button class="link-btn" data-toast="This is a demonstration account.">Switch</button>
+      </div>
+      <div class="suggest-head"><span>Suggested for you</span><button class="plain-btn" id="seeAll">See All</button></div>
+      <div id="suggestions"></div>
+      <p class="footer-links">About · Help · Press · API · Jobs · Privacy · Terms · Locations · Language · Meta Verified</p>
+      <p class="copyright">© 2026 INSTAGRAM-STYLE UI DEMO</p>
+    </aside>
+    <section class="alternate-page hidden" id="alternatePage">
+      <h1 id="alternateTitle">Explore</h1>
+      <p id="alternateDesc">Discover photos and creators in this interactive demo.</p>
+      <div class="explore-grid" id="exploreGrid"></div>
+    </section>
+  </main>
+
+  <nav class="mobile-nav">
+    <button data-page="Home" aria-label="Home">⌂</button>
+    <button data-page="Explore" aria-label="Explore">⌕</button>
+    <button data-page="Reels" aria-label="Reels">▻</button>
+    <button data-page="Messages" aria-label="Messages">➤</button>
+    <button data-page="Profile" aria-label="Profile"><span class="nav-avatar">D</span></button>
+  </nav>
+
+  <div class="toast" id="toast" role="status"></div>
+  <script src="app.js"></script>
+</body>
+</html>
